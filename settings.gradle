@@ -1,0 +1,3 @@
+rootProject.name = "LegacyAdMob"
+include ':app'
+include ':library'
