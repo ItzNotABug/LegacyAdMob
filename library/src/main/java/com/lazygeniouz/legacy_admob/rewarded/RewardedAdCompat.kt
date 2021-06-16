@@ -50,20 +50,20 @@ class RewardedAdCompat @JvmOverloads constructor(
      */
     @RequiresPermission("android.permission.INTERNET")
     @JvmOverloads
-    fun load(adRequest: AdRequest = AdRequest.Builder().build()) {
+    fun loadAd(adRequest: AdRequest = AdRequest.Builder().build()) {
         isAdLoading = true
         RewardedAd.load(context, adUnitId, adRequest, getRewardedAdLoadCallback())
     }
 
     /**
-     * Load a RewardedAd with default AdManagerAdRequest or
+     * Load a RewardedAd with default [AdManagerAdRequest] or
      * configure & pass a customised AdManagerAdRequest
      *
      * @param adRequest Default is an AdManagerAdRequest object without any customisation
      */
     @RequiresPermission("android.permission.INTERNET")
     @JvmOverloads
-    fun loadWithAdManager(
+    fun loadAdWithAdManager(
         adRequest: AdManagerAdRequest = AdManagerAdRequest.Builder().build()
     ) {
         isAdLoading = true

@@ -44,7 +44,7 @@ class InterstitialAdCompat(private val context: Context) {
      */
     @RequiresPermission("android.permission.INTERNET")
     @JvmOverloads
-    fun load(adRequest: AdRequest = AdRequest.Builder().build()) {
+    fun loadAd(adRequest: AdRequest = AdRequest.Builder().build()) {
         isAdLoading = true
         InterstitialAd.load(context, adUnitId, adRequest, object : InterstitialAdLoadCallback() {
             override fun onAdLoaded(newAd: InterstitialAd) {

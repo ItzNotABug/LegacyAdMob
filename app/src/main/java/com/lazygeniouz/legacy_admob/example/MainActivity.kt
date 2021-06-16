@@ -37,14 +37,14 @@ class MainActivity : AppCompatActivity() {
             if (rewardedAdCompat.isLoading()) return@setOnClickListener
             interstitial.isEnabled = false
             state.text = "Status: Loading Rewarded Ad"
-            rewardedAdCompat.load()
+            rewardedAdCompat.loadAd()
         }
 
         interstitial.setOnClickListener {
             if (interstitialCompat.isLoading()) return@setOnClickListener
             rewarded.isEnabled = false
             state.text = "Status: Loading Interstitial Ad"
-            interstitialCompat.load()
+            interstitialCompat.loadAd()
         }
     }
 
